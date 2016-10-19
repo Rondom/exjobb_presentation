@@ -1,0 +1,91 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass{beamer}
+
+\usepackage{fontspec}
+\usepackage{microtype}
+%\usepackage{beamerthemesplit}
+
+%\usepackage{pdfpages}
+%\usepackage[natbib=true,citestyle=numeric]{biblatex}
+%\usepackage{rotating}
+
+%\usepackage{tikz}
+%\usetikzlibrary{shapes}
+%\usetikzlibrary {positioning}
+%\definecolor {processblue}{cmyk}{0.96,0,0,0}
+
+\usepackage{graphicx}
+\usepackage{minted}
+
+%\usenavigationsymbolstemplate{}
+%\usetheme{Luebeck}
+
+\usepackage{beamerthemeIntel}
+\setbeamercolor{background canvas}{bg=}	% required for includepdf
+
+%\bibliography{../paper/reflist.bib}
+
+\title[File System Manipulation for Virtual Platforms]{File System Manipulation for Virtual Platforms}
+\subtitle{}
+\author{Andreas Gnau}
+\date{\today}
+
+% BEGIN: speaker notes on the right (comment to hide notes)
+% can be comfortably views with dspdfviewer (Linux)
+% ==> seems to work on Mac as well, but needs to be compiled
+% or Skim (Mac) http://skim-app.sourceforge.net/
+\ifdefined\shownotesright
+\usepackage{pgfpages}
+\setbeameroption{show notes}
+\setbeameroption{show notes on second screen=right}
+\else\ifdefined\shownotesonly
+\setbeameroption{show only notes}
+\fi
+\fi
+
+% END: speaker notes on the right
+
+
+\usepackage{hyperref}
+\hypersetup{pdfusetitle, colorlinks=false, hidelinks}
+% pdfpagemode=FullScreen
+
+
+% uncomment below (and comment above) to print the notes only
+%\setbeameroption{show only notes}
+
+\begin{document}
+
+    \include{frames/00_title}
+
+    \section[Outline]{}
+        \frame{\tableofcontents}
+    \section{Introduction}
+        \include{frames/01_1_introduction}
+        \include{frames/01_2_introduction}
+    \section{Existing Solutions}
+        \include{frames/02_1_existing_solutions}
+        \include{frames/02_2_existing_solutions}
+    \section{Background}
+        \include{frames/03_1_fuse}
+        \include{frames/03_2_libguestfs}
+        \include{frames/03_3_rump_splash}
+        \include{frames/03_4_rump}
+        \include{frames/03_5_lkl}
+
+    \section{Implementation}
+        \include{frames/04_implementation}
+    \section{Evaluation}
+        \include{frames/05_1_evaluation_how}
+        \include{frames/05_2_evaluation_chart}
+    \section{Conclusion}
+        \include{frames/06_1_conclusion}
+        \include{frames/06_2_recommendations}
+    \section*{Backup Slides}
+        \include{frames/09_0_backup_slides}
+        \include{frames/09_loopback}
+    
+%	\input{frames/references.tex}
+\end{document}

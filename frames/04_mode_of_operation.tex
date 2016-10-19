@@ -1,0 +1,41 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+%\frame[plain]{ % When including a large figure or table, you don't want to have the bottom and the top of the slides.
+%\frame[shrink]{ % If you want to include lots of text on a slide, use the shrink option.
+
+% Explain why we did this research
+
+\frame {
+% add GNUNet logo and maybe some illustrative "surveillance-picture"
+	\frametitle{Features and Mode of Operation}
+	\begin{itemize}
+		\item routing and encryption of messages in a MIX-network like manner => disguise who generates and who accesses content
+		\item "Encoding for Censorship-Resistant Sharing" provides plausible deniability and
+robustness
+		\item variety of different transport protocols: TCP, UDP, Bluetooth
+		\item applications: file-sharing, name service, telephony, IP-networking
+	\end{itemize}
+	
+	\note{
+		\begin{tiny}
+			\begin{itemize}
+				\item works by exchanging messages between peers (bootstapped, darknet)
+				\item in a MIX-network-like fashion i.e. messages are encrypted and routed over many different peers in order to disguise who gens and accesses content
+				\item messages are mixed with others and only sent out when there are enough other messages. PAUSE!
+				\item security from the mixing done by their component mixes
+				\item Onion routing networks get their security from choosing routes that are difficult for the adversary to observe
+				\item mix-nets provide stronger protection against an attacker having control over the whole nw (source, dest, all nodes)
+				\item may or may not use route unpredictability to enhance security 
+				\item Plausible deniability => can claim ignorance of the transferred content due to encryption, so it is difficult for them to be held responsible.
+				\item even for someone who monitors the whole network
+				\item Robustness: intermediaries can (despite the encryption) verify the validity of responses with respect to query prohibiting wilful tampering
+				\item economic model: reject msgs from peers of least trust
+				\item ==> flooding not possible
+				\item modularity
+				\item different transports (TCP, UDP, HTTPS or even SMTP (i.e. E-Mails), Wireless LAN or Bluetooth)
+				\item notable applications (e.g. mention that GNUnet conv relies on GNS as an example of modularity)
+			\end{itemize}
+		\end{tiny}
+	}
+}

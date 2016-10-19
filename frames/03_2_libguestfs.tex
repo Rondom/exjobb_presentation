@@ -1,0 +1,32 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+%\frame[plain]{ % When including a large figure or table, you don't want to have the bottom and the top of the slides.
+%\frame[shrink]{ % If you want to include lots of text on a slide, use the shrink option.
+
+\begin{frame}
+    \frametitle{libguestfs}
+        \begin{columns}[c]
+            \begin{column}{.45\textwidth}
+                \begin{itemize}
+                    \item library and suite of utilities for offline FS access
+                    \item runs a stripped down Linux appliance using libvirt and/or QEMU for FS-access
+                    \item mature ecosystem, many useful utilities
+                    \item used for Simics-externfs
+                \end{itemize}
+            \end{column}
+            \begin{column}{.30\textwidth}
+\includegraphics[width=.9\textwidth]{frames/img/libguestfs_logo}
+            \end{column}
+        \end{columns}
+
+    
+    \note{
+        \begin{itemize}
+            \item library and suite of utilities for offline FS access
+            \item runs a stripped down Linux appliance using libvirt and/or QEMU for FS-access
+            \item mature ecosystem, many useful utilities
+            \item used for Simics-externfs
+        \end{itemize}
+    }
+\end{frame}

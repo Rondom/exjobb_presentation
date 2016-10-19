@@ -1,0 +1,107 @@
+\mode<presentation>
+\usepackage{pgfcomp-version-0-65}
+\usepackage{color}
+
+% Colors
+\definecolor{FrameTitle}{RGB}{0, 113, 197}
+
+\setbeamercolor{white text}{fg = white}
+\setbeamercolor{item}{fg = black}
+\setbeamercolor{subitem}{fg = black}
+\setbeamercolor{subsubitem}{fg = black}
+\setbeamercolor{frametitle}{fg = FrameTitle}
+\setbeamercolor{section in toc}{fg = FrameTitle}
+\setbeamercolor*{palette primary}{bg = FrameTitle}
+
+% default fonts
+\usefonttheme{professionalfonts}
+
+% Font for the presentation title
+\setbeamerfont{title}{size = \huge}
+
+% Font of the frame titles
+\setbeamerfont{frametitle}{size = \Large}
+
+% Bullet List Style
+\useinnertheme{rounded}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{itemize subitem}[square]
+
+
+% Space out the slide titles
+\setbeamertemplate{frametitle}{
+\vspace*{4mm}\hspace*{-2mm}\insertframetitle}
+
+
+% Footer at bottom of slides
+\newcommand{\Ffootline}{
+  \makebox[0cm][l]{\hspace*{0mm}\raisebox{-0.5ex}{\usebeamercolor*[fg]{white text}\insertframenumber}\hspace*{0mm}}
+  \hspace{4mm}\shortstack[l]{\usebeamercolor*[fg]{white text}\insertinstitute \\  \usebeamercolor*[fg]{white text}INTEL CONFIDENTIAL, FOR INTERNAL USE ONLY\hspace{2mm}\usebeamercolor*[fg]{white text}\insertdate}
+  \hspace{3mm}
+  \usebeamercolor*[fg]{white text}Intel Information Technology
+  
+}
+
+\setbeamertemplate{footline}{%
+  \usebeamerfont{structure}
+  \makebox[0cm][l]{\includegraphics[width=\paperwidth]{footline_background.png}}
+  \makebox[4ex][l]{
+  	
+    \Tiny \raisebox{1.5ex}{\Ffootline}
+  }
+}
+ 
+%Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+
+% Title
+\newcommand{\MyTitle}{%
+ 	\hspace*{4mm}\raisebox{40mm}{
+  			\centering \inserttitle}}
+  			
+% Author   		
+ \newcommand{\MyAuthor}{ 		
+   \hspace*{26mm}\raisebox{25mm}{
+		\centering \insertauthor}}
+		
+% Institute		
+ \newcommand{\MyInstitute}{ 		
+   \hspace*{26mm}\raisebox{26.5mm}{
+		\centering \footnotesize \insertinstitute}}
+
+% Date			
+ \newcommand{\MyDate}{		
+   \hspace*{26mm}\raisebox{32mm}{
+ 		\centering	\insertdate}}
+  	
+% Title Slide Image
+\pgfdeclareimage[width = 0.8\paperwidth]{big}{title_background.png}
+
+\setbeamertemplate{title page}{
+			\begin{beamercolorbox}[wd=0.5\paperwidth,ht=0.13\paperwidth]{white text}
+			\raisebox{-60mm}{\hspace{-10mm}\pgfuseimage{big}\hspace{10mm}}
+		\end{beamercolorbox}
+%		
+		\begin{beamercolorbox}[wd=\paperwidth,ht=0.06\paperwidth]{white text}
+		    \usebeamerfont{white text}%
+   	 		\MyTitle	
+		\end{beamercolorbox}
+%
+ 		\begin{beamercolorbox}[wd=\paperwidth,ht=0.06\paperwidth]{white text}
+    		\usebeamerfont{white text}%
+   			 \MyAuthor	
+  		\end{beamercolorbox}
+%
+   		\begin{beamercolorbox}[wd=\paperwidth,ht=0.03\paperwidth]{white text}
+		    \usebeamerfont{head/foot}%
+   	 		\MyInstitute
+		\end{beamercolorbox}
+% 
+   		\begin{beamercolorbox}[wd=\paperwidth,ht=0.07\paperwidth]{white text}
+		    \usebeamerfont{white text}%
+		   	 \MyDate
+		\end{beamercolorbox}
+}
+\mode
+<all>  	  

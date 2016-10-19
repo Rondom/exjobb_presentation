@@ -1,0 +1,42 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+%\frame[plain]{ % When including a large figure or table, you don't want to have the bottom and the top of the slides.
+%\frame[shrink]{ % If you want to include lots of text on a slide, use the shrink option.
+
+\begin{frame}
+
+\frametitle{Implementation}
+\begin{itemize}
+    \item ported LKL CLI-utilities for FS manipulation to Windows
+    \item ported lklfuse to Windows and brought it to (near-)production quality on Linux
+    \item[$\Rightarrow$] We can now mount any filesystem supported by the Linux Kernel under Windows
+    \item created an experimental backend for libguestfs based on LKL
+    \item tried to port libguestfs to Windows (time was too short to accomplish that)
+    \item \textbf{TODO: ??? Add architecture diagram of lklfuse and libguestfs-lkl-fuse here }
+\end{itemize}
+
+\note{
+    \begin{itemize}
+        \item So, what did \textbf{I} do (besides evaluating)?
+        \item ported LKL-utils
+        \item lklfuse for Windows and Linux
+        \begin{itemize}
+            \item can now handle load (LKL is limited to 32/64 syscall threads and those threads were not freed...). Took two attempts to get right. Now the limit has been raised to 1024 / 4096 threads upstream
+            \item large file support (Did you know how Kernel >= 2.6 handle LFS?). I needed to find out by stepping from the VFS-layer to EXT4 to MM...
+            \item resource leaks on Windows
+            \item bugfixes in Dokan-FUSE (e.g. rmdir a directory with files in it => returned success even though it was not deleted)
+            \item using command-line-arguments to enable caching, bigger writes
+        \end{itemize}
+        \item libguestfs LKL backend: quick and dirty implementation, too slow for practical use, needs further investigation
+        \begin{itemize}
+            \item how to port the code from using open() to lkl\_sys\_open()? Looked into objcopy, coccinelle, manual editing, ifdefs. Ended up doing many \#defines
+            \item Even the original qemu-KVM is very slow, and so is the LKL-port.
+            \item A maintainable solution needs to be found to implement this code-wise
+        \end{itemize}
+        \item tried to port libguestfs to Windows (time was too short to accomplish that)
+    \end{itemize}
+}
+
+
+\end{frame}

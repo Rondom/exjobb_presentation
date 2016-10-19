@@ -1,0 +1,31 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+%\frame[plain]{ % When including a large figure or table, you don't want to have the bottom and the top of the slides.
+%\frame[shrink]{ % If you want to include lots of text on a slide, use the shrink option.
+
+\begin{frame}
+    \frametitle{Linux Kernel Library (LKL)}
+        \begin{columns}[c]
+            \begin{column}{.45\textwidth}
+                \begin{itemize}
+                    \item arch-port of the Linux kernel
+                    \item only basic primitives are implemented on the host side (threading, TLS, semaphores, timers...)
+                    \item CLI-utilities and experimental FUSE exist
+                \end{itemize}
+            \end{column}
+            \begin{column}{.55\textwidth}
+\includegraphics[width=.9\textwidth]{frames/img/lkl_overview}
+            \end{column}
+        \end{columns}
+
+
+    \note{
+        \begin{itemize}
+            \item arch-port similiar to UML to enable use as a library
+            \item interface is the syscalls, e.g. lkl\_sys\_getpid()
+            \item basic primitives are implemented for each host, POSIX, Win32, Windows Kernel, Haiku OS
+            \item interesting use cases EFI filesystem driver, running LKL inside a SGX enclave etc.
+        \end{itemize}
+    }
+\end{frame}

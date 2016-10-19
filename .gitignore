@@ -1,0 +1,15 @@
+*.aux
+*.bcf
+*.log
+*.nav
+*.out
+*.pdf
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.bbl
+*.blg
+*.vrb
+_minted-*/
+
