@@ -8,7 +8,7 @@
 
 \frametitle{Recommendations and Ideas}
 \begin{itemize}
-    \item improve the documentation on loopback mounting
+    \item simplify the documentation on loopback mounting
     \item port SimicsFS to Windows using Dokan
     \item enable on-the-fly access to CRAFF-images from the host using CRAFF-FS (FUSE) or some other technique like NBDkit
     \item link CRAFF-FS to Dokan-FUSE and expose a VHD for mounting on Windows
@@ -17,10 +17,14 @@
 \end{itemize}
 
 \note{
-    \begin{itemize}
-        \item w
-
-    \end{itemize}
+\begin{itemize}
+    \item simplify the documentation on loopback mounting (currently involves running parted and calculating offsets)
+    \item port SimicsFS to Windows using Dokan or another FUSE library
+    \item enable on-the-fly access to CRAFF-images from the host using CRAFF-FS (FUSE) or some other technique like NBDkit
+    \item link CRAFF-FS to Dokan-FUSE and expose a VHD for mounting on Windows
+    \item make the libguestfs-appliance run on Simics
+    \item enable downloading of debug-symbols from the target using checkpointing and/or some of the technologies presented
+\end{itemize}
 }
 
 

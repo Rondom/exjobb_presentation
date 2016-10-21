@@ -4,6 +4,12 @@
 \documentclass{beamer}
 
 \usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{swedish}
+\usepackage[english]{selnolig}
+
+\usepackage{csquotes}
 \usepackage{microtype}
 %\usepackage{beamerthemesplit}
 
@@ -36,6 +42,7 @@
 % can be comfortably views with dspdfviewer (Linux)
 % ==> seems to work on Mac as well, but needs to be compiled
 % or Skim (Mac) http://skim-app.sourceforge.net/
+\def\shownotesright{}
 \ifdefined\shownotesright
 \usepackage{pgfpages}
 \setbeameroption{show notes}
@@ -61,7 +68,7 @@
     \include{frames/00_title}
 
     \section[Outline]{}
-        \frame{\tableofcontents}
+        \frame{\tableofcontents \note{note text}}
     \section{Introduction}
         \include{frames/01_1_introduction}
         \include{frames/01_2_introduction}

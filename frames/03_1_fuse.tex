@@ -12,16 +12,18 @@
     
     \begin{itemize}
         \item simplifies writing file system drivers by avoiding kernel-level code
-        \item mounting / unmounting can be done as a unprivileged user
+        \item mounting / unmounting can be done as an unprivileged user
         \item file ownership can be adjusted to enable unprivileged access to the filesystem
     \end{itemize}
     
     \note{
-        \begin{itemize}
-            \item library and suite of utilities for offline FS access
-            \item runs a stripped down Linux appliance using libvirt and/or QEMU for FS-access
-            \item mature ecosystem, many useful utilities
-            \item used for Simics-externfs
-        \end{itemize}
+    \begin{itemize}
+        \item kernel driver exposes a queue of requests to user space...
+        \item ... which is consumed by a user space daemon handling those requests
+        \item Of course there is some overhead due to context switches and copying
+        \item simplifies writing file system drivers by avoiding kernel-level code
+        \item mounting / unmounting can be done as a unprivileged user
+        \item file ownership can be adjusted to enable unprivileged access to the filesystem
+    \end{itemize}
     }
 \end{frame}

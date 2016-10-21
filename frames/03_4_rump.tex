@@ -4,8 +4,6 @@
 %\frame[plain]{ % When including a large figure or table, you don't want to have the bottom and the top of the slides.
 %\frame[shrink]{ % If you want to include lots of text on a slide, use the shrink option.
 
-% Explain why we did this research
-
 \frame {
     % add GNUNet logo and maybe some illustrative "surveillance-picture"
     \frametitle{RUMP Kernel}
@@ -27,13 +25,15 @@
             \item This approach is only sustainable when the project is maintained within the same code base
         \end{itemize}
     }
+\hspace{10mm}
+        \begin{columns}[c]
+            \begin{column}{.2\textwidth}
+                \includegraphics[width=\textwidth]{frames/img/rump_logo}
+            \end{column}
+            \begin{column}{.2\textwidth}
+                \includegraphics[width=\textwidth]{frames/img/netbsd_logo}
+            \end{column}
+        \end{columns}
 
-    \begin{columns}[c]
-        \begin{column}{.4\textwidth}
-            \includegraphics[width=.4\textwidth]{frames/img/rump_logo}
-        \end{column}
-        \begin{column}{.4\textwidth}
-            \includegraphics[width=.4\textwidth]{frames/img/netbsd_logo}
-        \end{column}
-    \end{columns}
+
 }

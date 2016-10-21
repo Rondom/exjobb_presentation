@@ -1,4 +1,4 @@
-%!TEX TS-program = xelatex
+%!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
 %\frame[plain]{ % When including a large figure or table, you don't want to have the bottom and the top of the slides.
@@ -10,6 +10,7 @@
 \begin{itemize}
     \item LKL delivers acceptable performance for the use case of exchanging files from disk images
     \item more evaluation and optimizations needed for more general-purpose use
+    \item dedicated command-line utilities deliver higher performance but a worse user experience
     \item libguestfs is a very useful toolset in its current form
     \item implementing a backend for libguestfs requires a lot of work
     \item time was too short to implement, port and evaluate LKL-FUSE, libguestfs and libguestfs-lkl under both Windows and Linux
@@ -17,7 +18,13 @@
 
 \note{
     \begin{itemize}
-        \item w
+    \item LKL delivers acceptable performance for the use case of exchanging files from disk images
+    \item Even with SSDs, CPU-speed has increased at a higher pace than storage speed over the years
+    \item More evaluations and optimizations are needed for more general-purpose use
+    \item Use dedicated tools for performance, FUSE for usability
+    \item libguestfs is a very useful toolset in its current form wrt. to its feature-set
+    \item implementing a backend for libguestfs requires a lot of work
+    \item time was too short to implement, port and evaluate LKL-FUSE, libguestfs and libguestfs-lkl under both Windows and Linux
 
     \end{itemize}
 }
