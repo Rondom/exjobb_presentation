@@ -10,25 +10,24 @@
 
     \frametitle{Introduction}
     
-    There is room for improvement in existing methods of offline file system access in terms of feature-set and ease-of-use.
+    Virtual machines are widely used for development.
 
-    Accessing files while the simulation is running is not always feasible or possible, e.g. when...
+    Exchanging files while the guest (VM) running is not always feasible or possible, e.g. when...
     \begin{itemize}
         \item bootstrapping a new guest
-        \item neither Simics Agent nor networking is available on the target
-        \item debugging (for downloading symbols)
+        \item the guest not providing any networking
+        \item the guest is paused during debugging
     \end{itemize}
-
-
 
     \note{
         \begin{itemize}
-            \item room for improvement
+            \item VM enable a single host hardware to run multiple different guest OS isolated from another.
+            \item exchanging files done while VM is running using NW or hypervisor-specific tools
             \item online not always feasible or possible
             \begin{itemize}
                 \item bootstrapping a new guest (exchanging executable using a script)
-                \item no Simics Agent or networking is available on the target
-                \item debugging: getting debugging symbols
+                \item no networking or HV-specific support is available on the target (BIOS development)
+                \item debugging: getting debugging symbols. Breakpoint
             \end{itemize}
         \end{itemize}
     }
