@@ -8,8 +8,9 @@
     \frametitle{libguestfs}
     \begin{itemize}
         \item library and suite of utilities for offline FS access
-        \item mature ecosystem, many useful utilities
-        \item used for Simics-externfs
+        \item uses a dedicated VM for filesystem access
+        \item mature ecosystem, many useful CLI utilities
+        \item FUSE filesystem available as well
     \end{itemize}
 
 \begin{center}
@@ -19,11 +20,10 @@
     \note{
         \begin{itemize}
             \item library and suite of utilities for offline FS access
-            \item conversion of physical or virtual to virtual, install OS
-            \item runs a stripped down Linux appliance using libvirt and/or QEMU for FS-access
+            \item conversion of physical or virtual to virtual, install OS, tail-f
+            \item runs a stripped down Linux appliance using KVM (Hypervisor built into Linux kernel) for FS-access
             \item quite some overhead, but the goal is to isolate the operations from the host
             \item mature ecosystem, many useful utilities (install OS, convert OS to other HV, tail etc.)
-            \item used for Simics-externfs
         \end{itemize}
     }
 \end{frame}

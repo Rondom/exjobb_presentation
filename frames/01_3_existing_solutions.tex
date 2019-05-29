@@ -12,7 +12,7 @@
             \begin{block}{Linux}
                 \begin{itemize}
                     \item loopback-mounting
-                    \item CLI-utilities (e.g. mtools)
+                    \item filesystem-specific CLI-utilities (e.g. mtools)
                     \item alternative drivers (kernel and FUSE)
                     \item libguestfs
                     \item Linux Kernel Library (LKL)
@@ -24,7 +24,7 @@
                 \begin{itemize}
                     \item mounting VHD-files
                     
-                    \item CLI-utilities (e.g ltools)
+                    \item filesystem-specific CLI-utilities (e.g ltools)
                     \item alternative drivers (kernel and FUSE)
                 \end{itemize}
             \end{block}
@@ -32,8 +32,8 @@
     \end{columns}
     \note{
         \begin{itemize}
-            \item loopback/VHD mounting, => standard way, limited to OS FS support
-            \item CLI-utilities (mtools, ltools) => non-uniform interface, re-implementation, less-proven code
+            \item loopback/VHD mounting, => standard native way, included with OS, limited to OS FS support
+            \item filesystem-specific CLI-utilities (mtools, ltools) => non-uniform interface, re-implementation, less-proven code
             \item alternative drivers may lack the stability and feature-set of mature implementations
             \item Only libguestfs offers wide-FS support under a uniform interface. Goal: re-use OS-level code!
             \item LKL (allows using the Linux Kernel as a library)

@@ -11,13 +11,16 @@
     \end{center}
     
     \begin{itemize}
-        \item simplifies writing file system drivers by avoiding kernel-level code
+        \item simplifies writing file system drivers by avoiding kernel-space code
         \item mounting / unmounting can be done as an unprivileged user
         \item file ownership can be adjusted to enable unprivileged access to the filesystem
     \end{itemize}
     
     \note{
     \begin{itemize}
+        \item First explain how FS works. For now, ignore the right side
+        \item syscall to enter kernel, space and user space. priviliged instructions. Device and FS drivers usually in kernel. (supervisor-mode, comparch)
+        \item but what if I want to implement a FS in userspace? FUSE comes into play
         \item kernel driver exposes a queue of requests to user space...
         \item ... which is consumed by a user space daemon handling those requests
         \item Of course there is some overhead due to context switches and copying

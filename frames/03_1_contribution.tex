@@ -17,34 +17,13 @@
 \end{itemize}
 
 \note{
-\begin{tiny}
-
     \begin{itemize}
-        \item contribution in terms of implementation work
-        \item ported LKL-utils to Windows
+        \item So what did I do? LKL and libguestfs work only on Linux
+        \item ported LKL- CLI utils to Windows (copyto/from)
         \item lklfuse for Windows (port) using Dokan Library (equiv to libfuse) and improved quality on Linux
-        \begin{tiny}
-
-        \begin{itemize}
-            \item \tiny{]can now handle load (LKL is limited to 32/64 syscall threads and those threads were not freed...). Took two attempts to get right. Now the limit has been raised to 1024 / 4096 threads upstream}
-            \item \tiny{large file support (Did you know how Kernel >= 2.6 handle LFS?). I needed to find out by stepping from the VFS-layer to EXT4 to MM...}
-            \item resource leaks on Windows
-            \item \tiny{bugfixes in Dokan-FUSE (e.g. rmdir a directory with files in it => returned success even though it was not deleted)}
-            \item \tiny{using command-line-arguments to enable caching, bigger writes}
-        \end{itemize}
-        \end{tiny}
-        \item libguestfs LKL backend: quick and dirty implementation, too slow for practical use, needs further investigation
-
-        \begin{itemize}
-            \item \tiny{how to port the code from using open() to lkl\_sys\_open()? Looked into objcopy, coccinelle, manual editing, ifdefs. Ended up doing many \#defines}
-            \item \tiny{Even the original qemu-KVM is very slow, and so is the LKL-port.}
-            \item \tiny{A maintainable solution needs to be found to implement this code-wise}
-        \end{itemize}
-
-        \item tried to port libguestfs to Windows (time was too short to accomplish that)
+        \item libguestfs LKL backend. instead of using a VM, guestfsd is using LKL to access FS
+        %\item tried to port libguestfs to Windows (time was too short to accomplish that)
     \end{itemize}
-    
-\end{tiny}
 }
 
 
