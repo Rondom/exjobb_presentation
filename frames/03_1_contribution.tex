@@ -6,13 +6,13 @@
 
 \begin{frame}
 
-\frametitle{Implementation}
+\frametitle{Contribution: Implementation work}
 \begin{itemize}
     \item ported LKL CLI-utilities for FS manipulation to Windows
-    \item ported lklfuse to Windows and brought it to (near-)production quality on Linux
+    \item ported lklfuse to Windows and brought it to production quality on Linux
     \item[$\Rightarrow$] We can now mount any filesystem supported by the Linux Kernel under Windows
-    \item created an experimental backend for libguestfs based on LKL
-    \item tried to port libguestfs to Windows (time was too short to accomplish that)
+    \item created an proof-of-concept backend for libguestfs based on LKL
+%    \item tried to port libguestfs to Windows (time was too short to accomplish that)
     %\item \textbf{TODO: ??? Add architecture diagram of lklfuse and libguestfs-lkl-fuse here }
 \end{itemize}
 
@@ -20,9 +20,9 @@
 \begin{tiny}
 
     \begin{itemize}
-        \item So, what did \textbf{I} do (besides evaluating)?
-        \item ported LKL-utils
-        \item lklfuse for Windows and Linux
+        \item contribution in terms of implementation work
+        \item ported LKL-utils to Windows
+        \item lklfuse for Windows (port) using Dokan Library (equiv to libfuse) and improved quality on Linux
         \begin{tiny}
 
         \begin{itemize}
@@ -34,7 +34,6 @@
         \end{itemize}
         \end{tiny}
         \item libguestfs LKL backend: quick and dirty implementation, too slow for practical use, needs further investigation
-
 
         \begin{itemize}
             \item \tiny{how to port the code from using open() to lkl\_sys\_open()? Looked into objcopy, coccinelle, manual editing, ifdefs. Ended up doing many \#defines}

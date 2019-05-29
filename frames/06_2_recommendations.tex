@@ -6,24 +6,27 @@
 
 \begin{frame}
 
-\frametitle{Recommendations and Ideas}
+\frametitle{Further Work}
 \begin{itemize}
-    \item simplify the documentation on loopback mounting
-    \item port SimicsFS to Windows using Dokan
-    \item enable on-the-fly access to CRAFF-images from the host using CRAFF-FS (FUSE) or some other technique like NBDkit
-    \item link CRAFF-FS to Dokan-FUSE and expose a VHD for mounting on Windows
-    \item make the libguestfs-appliance run on Simics
-    \item enable downloading of debug-symbols from the target using checkpointing and/or some of the technologies presented
+    \item deeper analysis of results, testing different workloads
+    \item conformance with filesystem test suites
+    \item impact of mitigations for CPU vulnerabilities related to speculative execution
+    \item New software features: libfuse3 writeback-caching, LKL syscall overhead improvements, Dokan 2.0, Linux Kernel FUSE improvements
+    \item use case: manipulating disk images when using VMs for development
+    \item use case: enhanced security in distributions for mounting untrusted filesystems
 \end{itemize}
 
 \note{
 \begin{itemize}
-    \item simplify the documentation on loopback mounting (currently involves running parted and calculating offsets)
-    \item port SimicsFS to Windows using Dokan or another FUSE library
-    \item enable on-the-fly access to CRAFF-images from the host using CRAFF-FS (FUSE) or some other technique like NBDkit
-    \item link CRAFF-FS to Dokan-FUSE and expose a VHD for mounting on Windows
-    \item make the libguestfs-appliance run on Simics
+    \item deeper analysis of results, testing different workloads
+    \item conformance with filesystem test suites
+    \item impact of mitigations for CPU vulnerabilities related to speculative execution
+    \item New software features: libfuse3 writeback-caching, LKL syscall overhead improvements, Dokan 2.0, Linux Kernel FUSE improvements
     \item enable downloading of debug-symbols from the target using checkpointing and/or some of the technologies presented
+    \item what can it be used for?
+    \item use case: manipulating disk images when using VMs for development, integrate it
+    \item use in production for enhanced security in distributions such as TAILS or even OpenSUSE
+    \item all in all it was a great experience, learned a lot, interesting technology
 \end{itemize}
 }
 

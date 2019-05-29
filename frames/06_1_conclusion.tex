@@ -8,23 +8,24 @@
 
 \frametitle{Conclusion}
 \begin{itemize}
-    \item LKL delivers acceptable performance for the use case of exchanging files from disk images
+    \item LKLFUSE delivers acceptable performance for the use case of exchanging files from disk images on Linux
+    \item LKLFUSE on Windows is held back by the lack of good userspace FS library
     \item more evaluation and optimizations needed for more general-purpose use
-    \item dedicated command-line utilities deliver higher performance but a worse user experience
-    \item libguestfs is a very useful toolset in its current form
-    \item implementing a backend for libguestfs requires a lot of work
-    \item time was too short to implement, port and evaluate LKL-FUSE, libguestfs and libguestfs-lkl under both Windows and Linux
+    \item dedicated command-line utilities deliver higher performance but depending on the use case a worse user experience
+    \item libguestfs is a very useful toolset in its current form, but is best used from command-line
+    \item time was too short to analyse the results in detail
 \end{itemize}
 
 \note{
     \begin{itemize}
     \item LKL delivers acceptable performance for the use case of exchanging files from disk images
-    \item Even with SSDs, CPU-speed has increased at a higher pace than storage speed over the years
+    \item LKLFUSE on Windows is held back by the lack of good userspace FS library
     \item More evaluations and optimizations are needed for more general-purpose use
     \item Use dedicated tools for performance, FUSE for usability
     \item libguestfs is a very useful toolset in its current form wrt. to its feature-set
-    \item implementing a backend for libguestfs requires a lot of work
-    \item time was too short to implement, port and evaluate LKL-FUSE, libguestfs and libguestfs-lkl under both Windows and Linux
+    \item libguestfs architecture not suited for FUSE use case or LKL
+    \item time was too short: port and evaluate LKL-FUSE, libguestfs and libguestfs-lkl under both Windows and Linux
+    \item time was too short to evaluate
 
     \end{itemize}
 }

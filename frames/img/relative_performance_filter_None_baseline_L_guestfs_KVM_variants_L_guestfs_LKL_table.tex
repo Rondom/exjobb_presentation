@@ -1,0 +1,41 @@
+workload & blocksize & L guestfs KVM & L guestfs LKL \\
+\midrule
+             read & 4 KB &     100.00% &      73.41% \\
+             read & 8 KB &     100.00% &      72.76% \\
+            read & 32 KB &     100.00% &      72.03% \\
+          read & 1024 KB &     100.00% &      77.60% \\
+\midrule
+           reread & 4 KB &     100.00% &      72.46% \\
+           reread & 8 KB &     100.00% &      73.12% \\
+          reread & 32 KB &     100.00% &      80.59% \\
+        reread & 1024 KB &     100.00% &      81.94% \\
+\midrule
+      stride read & 4 KB &     100.00% &      89.24% \\
+      stride read & 8 KB &     100.00% &      78.07% \\
+     stride read & 32 KB &     100.00% &      72.47% \\
+   stride read & 1024 KB &     100.00% &      83.75% \\
+\midrule
+      random read & 4 KB &     100.00% &      89.53% \\
+      random read & 8 KB &     100.00% &      78.89% \\
+     random read & 32 KB &     100.00% &      73.07% \\
+   random read & 1024 KB &     100.00% &      83.18% \\
+\midrule
+            write & 4 KB &     100.00% &      77.90% \\
+            write & 8 KB &     100.00% &      76.90% \\
+           write & 32 KB &     100.00% &      79.76% \\
+         write & 1024 KB &     100.00% &     104.06% \\
+\midrule
+          rewrite & 4 KB &     100.00% &      77.08% \\
+          rewrite & 8 KB &     100.00% &      76.82% \\
+         rewrite & 32 KB &     100.00% &      79.48% \\
+       rewrite & 1024 KB &     100.00% &     102.32% \\
+\midrule
+     random write & 4 KB &     100.00% &      76.71% \\
+     random write & 8 KB &     100.00% &      76.47% \\
+    random write & 32 KB &     100.00% &      77.95% \\
+  random write & 1024 KB &     100.00% &     101.67% \\
+\midrule
+                    mean &     100.00% &      80.69% \\
+                  STDDEV &       0.00% &       8.82% \\
+                     MIN &     100.00% &      72.03% \\
+                     MAX &     100.00% &     104.06% \\

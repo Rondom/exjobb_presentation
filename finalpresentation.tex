@@ -4,6 +4,7 @@
 \documentclass{beamer}
 
 \usepackage{fontspec}
+\newfontfamily{\FAFR}{FontAwesome}
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
 \setotherlanguage{swedish}
@@ -11,6 +12,11 @@
 
 \usepackage{csquotes}
 \usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{array}
+
 %\usepackage{beamerthemesplit}
 
 %\usepackage{pdfpages}
@@ -25,7 +31,7 @@
 \usepackage{graphicx}
 \usepackage{minted}
 
-%\usenavigationsymbolstemplate{}
+\usenavigationsymbolstemplate{}
 \usetheme{Luebeck}
 
 %\usepackage{beamerthemeIntel}
@@ -79,7 +85,8 @@
         \include{frames/02_3_lkl}
 
     \section{Contribution}
-        \include{frames/03_contribution}
+        \include{frames/03_1_contribution}
+        \include{frames/03_2_contrib_table}
     \section{Evaluation}
         \include{frames/05_1_evaluation_how}
         \include{frames/05_2_evaluation_chart}
