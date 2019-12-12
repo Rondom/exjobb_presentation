@@ -1,4 +1,3 @@
-
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
@@ -45,33 +44,6 @@
         \item libguestfs-kvm is only slightly faster
         \item I expect it to be possible to optimize the prototypic LKL-backend so that it outperforms the LKL-backend
         
-    \end{itemize}
-}
-\end{frame}
-
-\begin{frame}[plain]
-    \frametitle{Throughput Relative to Windows VHD Mounting}
-    \vspace*{-1pt}
-    \makebox[\linewidth]{\includegraphics[page=1,width=0.87\paperwidth]{frames/img/relative_performance_filter_read_baseline_W_VHD_variants_W_Dokan_LKLFUSE}}
-    \note{
-        \begin{itemize}
-            \item LKLFUSE-Dokan does worse in relative (and absolute) under Windows than under Linux.
-            \item 40\% on average read performance. in opposite to Linux, higher blocksizes help, no readahead
-            \item Dokan has several problems (no caching, fixed number of worker threads)
-            \item interesting differences between blocksizes, not bigger is better. does not go through caching layer
-            \item LKL maybe also has some room improvement, Windows API expert
-        \end{itemize}
-    }
-\end{frame}
-
-\begin{frame}[plain]
-\frametitle{Throughput Relative to Windows VHD Mounting}
-\vspace*{-1pt}
-\makebox[\linewidth]{\includegraphics[page=1,width=0.87\paperwidth]{frames/img/relative_performance_filter_write_baseline_W_VHD_variants_W_Dokan_LKLFUSE}}
-\note{
-    \begin{itemize}
-        \item write 65\%, in-line with read-workloads. Differences for different blocksizes
-        \item also outperforming for random reads
     \end{itemize}
 }
 \end{frame}

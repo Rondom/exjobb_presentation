@@ -1,0 +1,26 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+%\frame[plain]{ % When including a large figure or table, you don't want to have the bottom and the top of the slides.
+%\frame[shrink]{ % If you want to include lots of text on a slide, use the shrink option.
+
+\begin{frame}
+
+    \frametitle{Use cases}
+    
+        \begin{itemize}
+            \item Mounting filesystem images without root-access
+            \item Manipulating files without mounting (CLI or library)
+            \item Re-using well-tested drivers from Linux in other OSes or bootloaders
+            \item Mounting untrusted filesystems (in the future, no good isolation, yet)
+        \end{itemize}
+
+    \note{
+        \begin{itemize}
+            \item Mounting filesystem images without root-access
+            \item Manipulating files without mounting (CLI or library)
+            \item Re-using well-tests drivers from Linux in other OSes or even bootloaders
+            \item Mounting untrusted filesystems (no good protection, yet)    
+        \end{itemize}
+    }
+\end{frame}

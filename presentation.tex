@@ -32,14 +32,15 @@
 \usepackage{minted}
 
 \usenavigationsymbolstemplate{}
-\usetheme{Luebeck}
+%\usetheme{Luebeck}
+\usetheme{metropolis}
 
 %\usepackage{beamerthemeIntel}
 \setbeamercolor{background canvas}{bg=}	% required for includepdf
 
 %\bibliography{../paper/reflist.bib}
 
-\title[File System Manipulation for Virtual Platforms]{File System Manipulation for Virtual Platforms}
+\title[Running Linux kernel filesystem drivers in userspace using Linux Kernel Library (LKL)]{Running Linux kernel filesystem drivers in userspace using Linux Kernel Library (LKL)}
 \subtitle{}
 \author{Andreas Gnau}
 \date{\today}
@@ -73,37 +74,42 @@
 
     \include{frames/00_title}
 
-    \section[Outline]{}
-        \frame{\tableofcontents \note{
+%    \section[Outline]{}
+        \frame{
+             \frametitle{Outline}
+            \tableofcontents \note{
         \begin{itemize}
-            \item my agenda: first start with an introduction into the problem at hand...
-            \item then proceed with background information necessary for understanding
-            \item AFter that I will talk about my contribution in terms of impl and eval
-            \item Then, finally I will present the results of the evaluation...
-            \item and finish with a conclusion
+            \item first start with a motivation on why one would want do that...
+            \item then proceed with background information on the different technologies
+            \item Briefly present performance numbers
+            \item Then, finally talk about uses of LKL in the FS domain and other domains
+            \item and finish with future work
         \end{itemize}
     }}
-    \section{Introduction}
-        \include{frames/01_1_introduction}
-        \include{frames/01_2_introduction}
-        \include{frames/01_3_existing_solutions}
+    \section{Motivation}
+        \include{frames/01_1_motivation}
+        \include{frames/01_2_demo}
+        \include{frames/01_3_is_it_a_problem}
+        %\include{frames/01_1_introduction}
+        %\include{frames/01_2_introduction}
+        %\include{frames/01_3_existing_solutions}
     \section{Background}
         \include{frames/02_1_fuse}
         \include{frames/02_2_libguestfs}
         \include{frames/02_3_lkl}
 
-    \section{Contribution}
-        \include{frames/03_1_contribution}
-        \include{frames/03_2_contrib_table}
-    \section{Evaluation}
-        \include{frames/05_1_evaluation_how}
-        \include{frames/05_2_evaluation_chart}
-    \section{Conclusion}
-        \include{frames/06_1_conclusion}
-        \include{frames/06_2_recommendations}
+    \section{Performance}
+        \include{frames/03_1_performance}
+    \section{Use Cases}
+        \include{frames/04_1_use_cases_fs}
+        \include{frames/04_2_use_cases_general}
+    \section{Future Work}
+
+        %\include{frames/06_1_conclusion}
+        %\include{frames/06_2_recommendations}
 %    \section*{Backup Slides}
         \include{frames/09_0_backup_slides}
-        \include{frames/09_loopback}
+        %\include{frames/09_loopback}
     
 %	\input{frames/references.tex}
 \end{document}

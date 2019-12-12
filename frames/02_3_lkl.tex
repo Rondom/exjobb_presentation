@@ -9,10 +9,9 @@
         \begin{itemize}
             \item "architecture" port of the Linux kernel so that the whole kernel can be run as a library
             \item does not interface with HW, but with a list of callbacks
-            \item can be run under Linux or Windows in a userspace process,
+            \item can be run on different hosts (userspace of Windows and Linux, EFI, Haiku kernel...)
             \item only basic primitives are implemented on the host side (threading, TLS, semaphores, timers...)
             \item interface towards the "library-kernel" are standard syscalls, e.g. lkl\_sys\_getpid()
-            \item CLI-utilities and experimental FUSE filesystem exists
         \end{itemize}
 
     \note{

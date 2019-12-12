@@ -1,0 +1,27 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+%\frame[plain]{ % When including a large figure or table, you don't want to have the bottom and the top of the slides.
+%\frame[shrink]{ % If you want to include lots of text on a slide, use the shrink option.
+
+\begin{frame}
+    
+    \frametitle{Motivation}
+    
+    File systems are complex code bases (ext4:~50~KLOC)
+    
+    Security bugs are a risk, because most file systems run in kernel space.
+    
+    
+    
+    \note{
+        \begin{itemize}
+            \item Everyone uses FS
+            \item lot of features, journaling, snapshots, raid, encryption
+            \item ext4 50 KLOC, btrfs: 130KLOC
+            \item security bugs (and other bugs) are a risk
+            \item run in kernel space, i.e. with highest privileges
+            \item code execution there, game over. 
+        \end{itemize}
+    }
+\end{frame}
