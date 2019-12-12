@@ -6,13 +6,15 @@
 
 \begin{frame}
     
-    \frametitle{Current Status and Future Work}
+    \frametitle{But wait...}
     
-    \makebox[\linewidth]{\includegraphics[width=0.57\paperwidth]{frames/img/xkcd_1200_authorization}}
+    \makebox[\linewidth]{\includegraphics[width=0.5\paperwidth]{frames/img/xkcd_1200_authorization}}
     
+    \small{https://xkcd.com/1200/}
     \note{
         \begin{itemize}
-            \item lklfuse runs as user mounting the thing...
+            \item You could say I lied. 
+            \item Of course without further isolation of the filesystem process in user space it will have access to anything in user space of the user it runs on.
         \end{itemize}
     }
 \end{frame}

@@ -6,21 +6,23 @@
 
 \begin{frame}
 
-    \frametitle{Use cases}
+    \frametitle{Applications within filesystems}
     
         \begin{itemize}
             \item Mounting filesystem images without root-access
             \item Manipulating files without mounting (CLI or library)
             \item Re-using well-tested drivers from Linux in other OSes or bootloaders
             \item Mounting untrusted filesystems (in the future, no good isolation, yet)
+            \item Use LKL for mounting filesystem types with a bad security record
         \end{itemize}
 
     \note{
         \begin{itemize}
             \item Mounting filesystem images without root-access
             \item Manipulating files without mounting (CLI or library)
-            \item Re-using well-tests drivers from Linux in other OSes or even bootloaders
-            \item Mounting untrusted filesystems (no good protection, yet)    
+            \item Re-using well-tests drivers from Linux in other OSes or even bootloaders (FreeBSD FUSE, UEFI, Haiku OS)
+            \item Mounting untrusted filesystems (no good protection, yet)
+            \item Use LKL for mounting filesystem types with a bad security record
         \end{itemize}
     }
 \end{frame}

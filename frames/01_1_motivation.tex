@@ -10,18 +10,16 @@
     
     File systems are complex code bases (ext4:~50~KLOC)
     
-    Security bugs are a risk, because most file systems run in kernel space.
-    
-    
-    
+    Security bugs are a risk and most file systems run in kernel space.
+
     \note{
         \begin{itemize}
-            \item Everyone uses FS
+            \item Everyone uses FS store files on laptops and mobiles
             \item lot of features, journaling, snapshots, raid, encryption
-            \item ext4 50 KLOC, btrfs: 130KLOC
+            \item ext4, common Linux-FS 50 KLOC, btrfs: 130KLOC
             \item security bugs (and other bugs) are a risk
-            \item run in kernel space, i.e. with highest privileges
-            \item code execution there, game over. 
+            \item run in kernel space, that means with highest privileges
+            \item Once you have code execution there, control over the whole system
         \end{itemize}
     }
 \end{frame}

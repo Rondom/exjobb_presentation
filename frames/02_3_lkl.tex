@@ -7,21 +7,22 @@
 \begin{frame}
     \frametitle{Linux Kernel Library (LKL)}
         \begin{itemize}
+            \item a library operating system
             \item "architecture" port of the Linux kernel so that the whole kernel can be run as a library
             \item does not interface with HW, but with a list of callbacks
-            \item can be run on different hosts (userspace of Windows and Linux, EFI, Haiku kernel...)
+            \item implementations for those callbacks exist for different hosts (userspace of Windows and Linux, UEFI...)
             \item only basic primitives are implemented on the host side (threading, TLS, semaphores, timers...)
             \item interface towards the "library-kernel" are standard syscalls, e.g. lkl\_sys\_getpid()
         \end{itemize}
 
     \note{
         \begin{itemize}
+            \item \textbf{Q} library OS, an OS kernel that can be used as a library
             \item arch-port of Linux kernel. What does that mean? Kernel structured that it is easy to port to new arch such as ARM, MIPS, PPC.
-            \item LKL is such an architecture, but not a CPU arch in the classic sense, but running as library in another context
+            \item all code in one folder- LKL is such an architecture, but not a CPU arch in the classic sense
             \item basic primitives are implemented for each host, POSIX, Win32, Windows Kernel, Haiku OS
             \item interface is the syscalls, e.g. lkl\_sys\_getpid()
-            \item CLI-utilities and experimental FUSE filesystem exists
-            \item interesting use cases EFI filesystem driver, running LKL inside a SGX enclave etc., NW simulation
+            \item CLI-utilities to exchange files and a FUSE filesystem exists
         \end{itemize}
     }
 \end{frame}
