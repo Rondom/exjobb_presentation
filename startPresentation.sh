@@ -1,3 +1,3 @@
 #!/bin/sh
 xrandr
-dspdfviewer finalpresentation_shownotesright.pdf
+dspdfviewer presentation_shownotesright.pdf

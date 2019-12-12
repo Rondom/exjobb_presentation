@@ -1,5 +1,5 @@
 #!/bin/sh
-NAME="finalpresentation.tex"
+NAME="presentation.tex"
 BASENAME="$(basename "$NAME" .tex)"
 LATEX=lualatex
 
