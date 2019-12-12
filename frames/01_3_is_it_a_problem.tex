@@ -1,0 +1,36 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+%\frame[plain]{ % When including a large figure or table, you don't want to have the bottom and the top of the slides.
+%\frame[shrink]{ % If you want to include lots of text on a slide, use the shrink option.
+
+\begin{frame}
+
+    \frametitle{Is it a big problem?}
+    
+        \begin{itemize}
+            \item<2-> It depends...
+            \item<3-> There are easier ways: downloading and executing files via a browser, BadUSB...
+        \end{itemize}
+    
+        \only<4->{... but...}
+
+        \begin{itemize}
+            \item<4-> Unattended PC with lock screen
+            \item<4-> Connecting untrusted USB disks
+            \item<4-> Air-Gapped machines
+            \item<4-> Double-clicking filesystem images (depends on configuration)
+        \end{itemize}
+    \note{
+        \begin{itemize}
+            \item \textbf{Ask: So, who thinks this is a big prob, who doesn't, why?}
+            \item It depends...
+            \item There are easier ways: downloading and executing files via a browser, BadUSB...
+            \item Unattended PC with lock screen
+            \item Connecting USB disks
+            \item Double-clicking filesystem images (depends on configuration)
+            \item Air-Gapped machines
+            
+        \end{itemize}
+    }
+\end{frame}

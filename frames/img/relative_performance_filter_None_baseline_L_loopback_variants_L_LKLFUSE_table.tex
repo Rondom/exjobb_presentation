@@ -1,0 +1,41 @@
+workload & blocksize & L loopback & L LKLFUSE \\
+\midrule
+             read & 4 KB &     100.00% &      72.89% \\
+             read & 8 KB &     100.00% &      71.72% \\
+            read & 32 KB &     100.00% &      63.59% \\
+          read & 1024 KB &     100.00% &      60.89% \\
+\midrule
+           reread & 4 KB &     100.00% &      74.33% \\
+           reread & 8 KB &     100.00% &      72.45% \\
+          reread & 32 KB &     100.00% &      68.68% \\
+        reread & 1024 KB &     100.00% &      63.18% \\
+\midrule
+      stride read & 4 KB &     100.00% &      80.70% \\
+      stride read & 8 KB &     100.00% &      82.00% \\
+     stride read & 32 KB &     100.00% &      85.60% \\
+   stride read & 1024 KB &     100.00% &      53.72% \\
+\midrule
+      random read & 4 KB &     100.00% &      80.43% \\
+      random read & 8 KB &     100.00% &      82.70% \\
+     random read & 32 KB &     100.00% &      86.10% \\
+   random read & 1024 KB &     100.00% &      53.29% \\
+\midrule
+            write & 4 KB &     100.00% &      22.52% \\
+            write & 8 KB &     100.00% &      36.66% \\
+           write & 32 KB &     100.00% &      69.42% \\
+         write & 1024 KB &     100.00% &     110.87% \\
+\midrule
+          rewrite & 4 KB &     100.00% &      47.33% \\
+          rewrite & 8 KB &     100.00% &      79.07% \\
+         rewrite & 32 KB &     100.00% &     165.78% \\
+       rewrite & 1024 KB &     100.00% &     199.86% \\
+\midrule
+     random write & 4 KB &     100.00% &      53.96% \\
+     random write & 8 KB &     100.00% &      41.54% \\
+    random write & 32 KB &     100.00% &      83.48% \\
+  random write & 1024 KB &     100.00% &     189.51% \\
+\midrule
+                    mean &     100.00% &      80.44% \\
+                  STDDEV &       0.00% &      40.50% \\
+                     MIN &     100.00% &      22.52% \\
+                     MAX &     100.00% &     199.86% \\
