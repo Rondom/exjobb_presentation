@@ -11,6 +11,8 @@
     File systems are complex code bases (ext4:~50~KLOC)
     
     Security bugs are a risk and most file systems run in kernel space.
+    
+    However, it is also very attractive to reuse such a big codebase in novel ways.
 
     \note{
         \begin{itemize}
@@ -20,6 +22,7 @@
             \item security bugs (and other bugs) are a risk
             \item run in kernel space, that means with highest privileges
             \item Once you have code execution there, control over the whole system
+            \item Attractive to re-use this code base in other contexts
         \end{itemize}
     }
 \end{frame}
